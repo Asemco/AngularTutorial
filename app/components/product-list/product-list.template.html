@@ -1,0 +1,35 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-2">
+            <p>
+                <label for="search">Search:</label>
+                <input id="search" name="search" ng-model="$ctrl.query" />
+            </p>
+            <p>
+                <label for="sort">Sort By:</label>
+                <select id="sort" name="sort" ng-model="$ctrl.sortOrder">
+                    <option value="name">Alphabetical</option>
+                    <option value="price">Price</option>
+                </select>
+            </p>
+        </div>
+        <div class="col-md-10">
+            <ul class="products">
+                <li ng-repeat="product in $ctrl.products | filter: $ctrl.query | orderBy: $ctrl.sortOrder">
+                    <a href="#/products/{{product.name}}" class="thumb">
+                        <img ng-src="{{product.image_thumbnail}}" alt="{{product.name}}" />
+                    </a>
+                    <a href="#/products/{{product.name}}"><h2>{{product.name}}</h2></a>
+                    <span>Description: {{product.description}}</span> <br />
+                    <span>Price: {{product.price | currency}}</span> <br />
+                    <hr />
+                    <div>
+                        <label for="amount">Quantity</label>
+                        <input id="amount" type="number" name="amount" min="0" max="{{product.quantity}}"/>
+                        <button>Buy Now</button>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

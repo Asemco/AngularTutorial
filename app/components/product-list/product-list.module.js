@@ -1,1 +1,3 @@
-angular.module('productList', []);
+angular.module('productList', [
+    'core.product'
+]);

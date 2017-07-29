@@ -1,0 +1,36 @@
+{
+  "id": 16,
+  "dispensary_product_id": 1,
+  "product_id": 7,
+  "dispensary_id": 186,
+  "name": "Kryptonite",
+  "origin": "Indica",
+  "thc": 24,
+  "cbd": 0.3,
+  "image": "Product126620384859235330c7aca329016514.png",
+  "image_thumbnail": "thumbnail_Product126620384859235330c7aca329016514.png",
+  "image_full": "full_Product126620384859235330c7aca329016514.png",
+  "price": 12,
+  "quantity": "0.00",
+  "description": "A sick strain of delicious kush",
+  "categories": [{"id": 1, "category": "Flower"}],
+  "traits": [{
+    "id": 1,
+    "trait": "Euphoria",
+    "description": "A feeling or state of intense excitement and happiness!",
+    "icon": "lightbulb_outline"
+  }, {
+    "id": 2,
+    "trait": "Hunger",
+    "description": "Expect to look for a snack after consuming this.",
+    "icon": "cake"
+  }],
+  "discount1": 2,
+  "discount2": 5,
+  "discount3": 15,
+  "discount4": 15,
+  "created_at": 1490957998,
+  "completed_at": 1491812886,
+  "status": 2,
+  "dispensary_name": "Greenland Dispensary"
+}

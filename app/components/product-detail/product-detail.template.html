@@ -1,0 +1,57 @@
+<img ng-src="{{$ctrl.mainImageUrl}}" alt="{{$ctrl.product.name}}" class="product" />
+
+<h1>{{$ctrl.product.name}}</h1>
+
+<p>{{$ctrl.product.description}}</p>
+
+<h3>Product Images</h3>
+<div class="product-images">
+    <img ng-src="{{$ctrl.product.image}}"
+         height="100" width="100"
+         class="product"
+         ng-class="{selected: $ctrl.product.image === $ctrl.mainImageUrl}"
+         ng-click="$ctrl.setImage($ctrl.product.image)" />
+    <img ng-src="{{$ctrl.product.image_full}}"
+         height="100" width="100"
+         class="product"
+         ng-class="{selected: $ctrl.product.image_full === $ctrl.mainImageUrl}"
+         ng-click="$ctrl.setImage($ctrl.product.image_full)" />
+    <img ng-src="{{$ctrl.product.image_thumbnail}}"
+         height="100" width="100"
+         class="product"
+         ng-class="{selected: $ctrl.product.image_thumbnail === $ctrl.mainImageUrl}"
+         ng-click="$ctrl.setImage($ctrl.product.image_thumbnail)" />
+</div>
+
+<h3>Product Categories</h3>
+<ul class="categories">
+    <li ng-repeat="category in $ctrl.product.categories">
+        <span>{{category.category}}</span>
+    </li>
+</ul>
+<h3>Product Traits</h3>
+<ul class="traits">
+    <li ng-repeat="trait in $ctrl.product.traits">
+        <span>{{trait.trait}} - {{trait.description}}</span>
+    </li>
+</ul>
+
+<ul class="qualities">
+    <li>
+        <span>Origin: {{$ctrl.product.origin}}</span>
+    </li>
+    <li>
+        <span>CBD: {{$ctrl.product.cbd}}</span>
+    </li>
+    <li>
+        <span>THC: {{$ctrl.product.thc}}</span>
+    </li>
+</ul>
+<span>Price: {{$ctrl.product.price | currency}}</span> <br />
+<hr />
+<div>
+    <label for="amount">Quantity</label>
+    <input id="amount" type="number" name="amount" min="0" max="{{$ctrl.product.quantity}}"/>
+    <button>Buy Now</button>
+</div>
+<a ng-href="#!/products">Go Back</a>
